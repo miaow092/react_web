@@ -1,0 +1,14 @@
+footer {
+	width: 100%;
+	height: 50vh;
+	background: #85abbd;
+	.inner {
+		width: 1180px;
+		margin: 0px auto;
+		position: relative;
+		p {
+			text-align: center;
+			font: 25px/50vh 'arial';
+		}
+	}
+}
