@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_web/static/css/main.88daa272.css",
+    "main.js": "/react_web/static/js/main.cefc4251.js",
+    "index.html": "/react_web/index.html",
+    "main.88daa272.css.map": "/react_web/static/css/main.88daa272.css.map",
+    "main.cefc4251.js.map": "/react_web/static/js/main.cefc4251.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88daa272.css",
+    "static/js/main.cefc4251.js"
+  ]
+}
