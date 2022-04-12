@@ -1,54 +1,97 @@
 header {
 	width: 100%;
-	height: 15vh;
-	background: #f4ede5;
 
-	#gnb ul {
-		border-bottom: 1px solid #000;
-		&::after {
-			display: block;
-			content: '';
-			clear: both;
+	.store {
+		background: #bf92c4;
+		border-bottom: 1px solid #a27ba7;
+		display: flex;
+		justify-content: center;
+		height: 30px;
+
+		span {
+			font: 13px/30px 'arial';
+			margin-right: 30px;
+			color: #fff;
 		}
-		li {
-			float: left;
-			margin-left: 30px;
-			a {
-				color: #000;
+		a {
+			font: bold 13px/30px 'arial';
+			letter-spacing: 2px;
+			color: #fff;
+		}
+	}
+
+	#gnb {
+		border-bottom: 1px solid #000;
+		background: #f4ede5;
+		.inner {
+			width: 1180px;
+			height: 35px;
+			margin: 0 auto;
+
+			span {
+				font: 15px/35px 'arial';
+				display: inline-block;
+				padding: 0 20px;
+				transition: 0.3s;
+
+				&:hover {
+					background: #85abbd;
+				}
+			}
+
+			ul {
+				float: right;
+				li {
+					float: left;
+					a {
+						color: #000;
+						font: 15px/35px 'arial';
+						height: 100%;
+						padding: 0 20px;
+						display: inline-block;
+						transition: 0.3s;
+
+						&:hover {
+							background: #85abbd;
+						}
+					}
+				}
 			}
 		}
 	}
 
-	.inner {
-		width: 1180px;
-		height: 13vh;
-		margin: 0px auto;
-		position: relative;
+	main {
+		background: #f4ede5;
+		.inner {
+			width: 1180px;
+			height: 100px;
+			margin: 0px auto;
+			position: relative;
 
-		h1 {
-			position: absolute;
-			left: 0px;
-			font: bold 50px/13vh 'arial';
-			a {
-				color: #000;
-			}
-		}
-		nav ul {
-			position: absolute;
-			right: 0;
-			&::after {
-				display: block;
-				content: '';
-				clear: both;
-			}
-			li {
-				float: left;
-				font: bold 15px/13vh 'arial';
-				margin-left: 30px;
+			h1 {
+				position: absolute;
+				left: 0px;
+				font: bold 50px/100px 'arial';
 				a {
 					color: #000;
 				}
 			}
+			nav ul {
+				position: absolute;
+				right: 0;
+				li {
+					float: left;
+					font: bold 15px/100px 'arial';
+					margin-left: 30px;
+					a {
+						color: #000;
+					}
+				}
+			}
 		}
+	}
+
+	&.sub {
+		background: #85abbd;
 	}
 }

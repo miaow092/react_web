@@ -1,12 +1,15 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './scss/style.scss';
 
+//common
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
+//main
 import Visual from './components/main/Visual';
 import Content from './components/main/Content';
 
+//sub
 import Youtube from './components/sub/Youtube';
 import Gallery from './components/sub/Gallery';
 import About from './components/sub/About';
@@ -14,15 +17,22 @@ import Account from './components/sub/Account';
 import ContactUs from './components/sub/ContactUs';
 import Join from './components/sub/Join';
 import Shop from './components/sub/Shop';
+const path = process.env.PUBLIC_URL;
 
 function App() {
 	return (
 		<>
-			<Route path='/'>
-				<Header />
-				<Visual />
-				<Content />
-			</Route>
+			<Switch>
+				<Route exact path='/'>
+					<Header type={'main'} />
+					<Visual />
+					<Content />
+				</Route>
+
+				<Route path='/'>
+					<Header type={'sub'} />
+				</Route>
+			</Switch>
 
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/gallery' component={Gallery} />
