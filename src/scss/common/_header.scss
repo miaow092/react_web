@@ -60,7 +60,7 @@ header {
 		}
 	}
 
-	main {
+	&.main {
 		background: #f4ede5;
 		.inner {
 			width: 1180px;
@@ -93,5 +93,32 @@ header {
 
 	&.sub {
 		background: #85abbd;
+		.inner {
+			width: 1180px;
+			height: 100px;
+			margin: 0px auto;
+			position: relative;
+
+			h1 {
+				position: absolute;
+				left: 0px;
+				font: bold 50px/100px 'arial';
+				a {
+					color: #000;
+				}
+			}
+			nav ul {
+				position: absolute;
+				right: 0;
+				li {
+					float: left;
+					font: bold 15px/100px 'arial';
+					margin-left: 30px;
+					a {
+						color: #000;
+					}
+				}
+			}
+		}
 	}
 }

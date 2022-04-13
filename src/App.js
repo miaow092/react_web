@@ -4,6 +4,7 @@ import './scss/style.scss';
 //common
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import Popup from './components/common/Popup';
 
 //main
 import Visual from './components/main/Visual';

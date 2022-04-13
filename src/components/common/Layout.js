@@ -8,8 +8,12 @@ function Layout(props) {
 	}, []);
 
 	return (
-		<section className={`content &{props.name}`} ref={frame}>
-			<figure></figure>
+		<section className={`content ${props.name}`} ref={frame}>
+			<figure>
+				<img src={`${props.src}`} />
+				<h1>{props.title}</h1>
+				<p>{props.des}</p>
+			</figure>
 			<div className='inner'>{props.children}</div>
 		</section>
 	);

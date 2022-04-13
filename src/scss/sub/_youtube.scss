@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.Youtube {
+	.inner {
+		width: 900px;
+		article {
+			margin-bottom: 50px;
+			position: relative;
+
+			img {
+				width: 900px;
+				height: 300px;
+				object-fit: cover;
+				position: relative;
+				right: 0;
+				margin-bottom: 20px;
+				color: #111;
+				transition: 1s;
+				cursor: pointer;
+				position: relative;
+
+				&::after {
+					display: block;
+					content: 'PLAY';
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 100px;
+					color: #85abbd;
+					padding: 20px;
+					z-index: 10;
+				}
+
+				&:hover {
+					height: 500px;
+				}
+			}
+			h2 {
+				font: 30px/1 'Bellefair';
+				margin-bottom: 20px;
+			}
+			span {
+				font: 20px/1 'arial';
+				display: block;
+				margin-bottom: 20px;
+				color: #333;
+			}
+			p {
+				font: 15px/1 'arial';
+				color: #333;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

@@ -5,9 +5,9 @@ import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+function Header(props) {
 	return (
-		<header>
+		<header className={props.type}>
 			<div className='store'>
 				<span>Flagship Store Opening in Soho!</span>
 				<NavLink to='/'>

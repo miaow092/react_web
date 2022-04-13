@@ -1,0 +1,34 @@
+.Gallery {
+	ul {
+		width: 100%;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		li {
+			width: 33%;
+			height: 300px;
+			float: left;
+			padding: 10px;
+
+			> .inner {
+				width: 100%;
+				height: 100%;
+				background: #111;
+
+				.pic {
+					width: 100%;
+					height: 180px;
+					margin-bottom: 20px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
