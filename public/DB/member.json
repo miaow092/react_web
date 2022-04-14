@@ -1,24 +1,29 @@
 {
   "data": [
     {
-      "name": "Julia",
-      "position": "CEO",
+      "name": "Breenn Gilbert",
+      "position": "FOUNCER & CEO",
       "pic": "member1.jpg"
     },
     {
-      "name": "Paul",
-      "position": "Vice President",
+      "name": "Jaimie Druipi",
+      "position": "DIREXTOR OF OPERATIONS",
       "pic": "member2.jpg"
     },
     {
-      "name": "Michael",
-      "position": "Designer",
+      "name": "Shelby Barnes",
+      "position": "DIRECTOR OF ECOMMERCE",
       "pic": "member3.jpg"
     },
     {
-      "name": "Emily",
-      "position": "Front-end Dev",
+      "name": "Miranda Sherman",
+      "position": "HEAD OF RETAIL AND EXPERIENCE",
       "pic": "member4.jpg"
+    },
+    {
+      "name": "Rachel Gannon",
+      "position": "HEAD OF BUYING AND MERCHANDISING",
+      "pic": "member6.jpg"
     }
   ]
 }

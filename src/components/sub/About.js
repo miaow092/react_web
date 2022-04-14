@@ -1,14 +1,38 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 const path = process.env.PUBLIC_URL;
 
 function About() {
+	// useEffect(() => {
+	// 	window.addEventListener('scroll', getCurrentScroll);
+
+	// 	return () => window.removeEventListener('scroll', getCurrentScroll);
+	// }, []);
+
+	// const getCurrentScroll = () => {
+	// 	if (
+	// 		((window.scrollY + window.innerHeight) / document.body.clientHeight) *
+	// 			100 >=
+	// 		28
+	// 	) {
+	// 		setScrollPosition(13);
+	// 	} else if (
+	// 		((window.scrollY + window.innerHeight) / document.body.clientHeight) *
+	// 			100 <
+	// 		28
+	// 	) {
+	// 		setScrollPosition(0);
+	// 	}
+	// };
+
 	const [members, setMembers] = useState([]);
 
 	useEffect(() => {
 		axios.get(`${path}/DB/member.json`).then((json) => {
-			console.log(json.data.data);
 			setMembers(json.data.data);
 		});
 	}, []);
@@ -37,20 +61,23 @@ function About() {
 					</div>
 				</div>
 
-				<h1>
-					<span>WHO WE ARE</span>Feste is a new lifestyle brand, dedicated to
-					celebrating moments big and small.
-				</h1>
-				<p>
-					With an entirely new approach to gathering, our shops and
-					lovefeste.com will help our guests do more than set a beautiful table.
-					Because for us, it’s about the feeling, the attitude, the vibe. It’s
-					all about setting the scene. We help create that multisensory je ne
-					sais quoi, from what’s in the glass to the rules of the game, through
-					curated kits, à la carte supplies, found vintage wares, and
-					hand-picked local vendors. And with a family of great hosts at the
-					heart of the brand, we’re always eager to lend a helping hand.
-				</p>
+				<div className='des'>
+					<h1>
+						<span>WHO WE ARE</span>Feste is a new lifestyle brand, dedicated to
+						celebrating moments big and small.
+					</h1>
+					<p>
+						With an entirely new approach to gathering, our shops and
+						lovefeste.com will help our guests do more than set a beautiful
+						table. Because for us, it’s about the feeling, the attitude, the
+						vibe. It’s all about setting the scene. We help create that
+						multisensory je ne sais quoi, from what’s in the glass to the rules
+						of the game, through curated kits, à la carte supplies, found
+						vintage wares, and hand-picked local vendors. And with a family of
+						great hosts at the heart of the brand, we’re always eager to lend a
+						helping hand.
+					</p>
+				</div>
 			</section>
 
 			<section className='introduce2'>
@@ -84,7 +111,28 @@ function About() {
 				</div>
 			</section>
 
-			<section className='member'></section>
+			<section className='member'>
+				<h1>Meet Your Hosts</h1>
+				<div className='memberList'>
+					<ul>
+						{members.map((member, idx) => {
+							return (
+								<li key={idx}>
+									<img src={`${path}/img/${member.pic}`} />
+									<h2>{member.name}</h2>
+									<p>{member.position}</p>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+				<button className='prev'>
+					<FontAwesomeIcon icon={faArrowLeft} />
+				</button>
+				<button className='next'>
+					<FontAwesomeIcon icon={faArrowRight} />
+				</button>
+			</section>
 		</Layout>
 	);
 }

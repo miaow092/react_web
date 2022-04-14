@@ -1,6 +1,7 @@
 .Gallery {
 	ul {
 		width: 100%;
+		min-height: 600px;
 		&::after {
 			content: '';
 			display: block;

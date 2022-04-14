@@ -20,7 +20,7 @@ function Header(props) {
 					<span>Meet Festive & Co</span>
 					<ul>
 						<li>
-							<NavLink to='/contatctus'>Contact Us</NavLink>
+							<NavLink to='/location'>Location</NavLink>
 						</li>
 						<li>
 							<NavLink to='/account'>Account</NavLink>

@@ -2,7 +2,7 @@
 	background: #f4ede5;
 	figure {
 		width: 100%;
-		height: 400px;
+		height: calc(100vh - 165px);
 		overflow: hidden;
 		position: relative;
 		background: #85abbd;
@@ -19,14 +19,14 @@
 			text-align: center;
 			width: 100%;
 			font: 80px/1 'Bellefair';
-			top: 30%;
+			top: 40%;
 			color: #e3ff21;
 		}
 		p {
 			width: 100%;
 			text-align: center;
 			position: absolute;
-			font: 15px/1 'arial';
+			font: 20px/1 'arial';
 			top: 60%;
 			color: #fff;
 		}
@@ -41,7 +41,6 @@
 		transition: 1s;
 		position: relative;
 	}
-
 	&.on {
 		.inner {
 			transform: translateY(0px);
