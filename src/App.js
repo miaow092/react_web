@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './scss/style.scss';
 
 //common
@@ -23,6 +24,7 @@ function App() {
 			<Switch>
 				<Route exact path='/'>
 					<Main />
+					<popUp />
 				</Route>
 
 				<Route path='/'>
