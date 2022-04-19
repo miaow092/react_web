@@ -10,24 +10,53 @@
 		content: '';
 		clear: both;
 	}
-	h1 {
-		font: 40px/1 'arial';
-		text-align: center;
-		padding: 20px 0;
-		margin-bottom: 50px;
+	.survice {
+		li {
+			margin-bottom: 40px;
+			width: 280px;
+			height: 200px;
+			margin-right: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			float: left;
+			&:last-child {
+				margin-right: 0;
+			}
+			svg {
+				width: 100px;
+				height: 100px;
+				margin-bottom: 20px;
+			}
+			> h1 {
+				font: 25px/1 'arial';
+				margin-bottom: 10px;
+				color: #333;
+			}
+			p {
+				font: 15px/1 'arial';
+				color: #555;
+			}
+		}
+	}
+	> h2 {
+		font: 30px/1 'arial';
+		margin-bottom: 30px;
+		color: #333;
+		text-align: centext;
 	}
 	#map {
-		width: 50%;
-		height: 600px;
+		width: 65%;
+		height: 580px;
 		position: relative;
 		float: left;
 	}
 	.text {
 		float: right;
-		width: 49%;
+		width: 34%;
 		li {
-			font: 30px/180px 'arial';
-			border-radius: 25px;
+			font: 25px/180px 'arial';
 			height: 180px;
 			cursor: pointer;
 			padding: 10px;
@@ -44,7 +73,7 @@
 
 			&:hover {
 				filter: grayscale(0);
-				font: bold 40px/180px 'arial';
+				font: bold 30px/180px 'arial';
 			}
 		}
 	}

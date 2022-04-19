@@ -3,6 +3,8 @@ import Layout from '../common/Layout';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Popup from '../common/Popup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const path = process.env.PUBLIC_URL;
 
@@ -43,6 +45,9 @@ function Youtube() {
 								setIndex(idx);
 							}}>
 							<img src={item.snippet.thumbnails.maxres.url} />
+							<a>
+								<FontAwesomeIcon icon={faCirclePlay} />
+							</a>
 							<h2>{item.snippet.title}</h2>
 							<span>{date.split('T')[0]}</span>
 							<p>{desc.length > 150 ? desc.substr(0, 150) + '...' : desc}</p>

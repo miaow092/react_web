@@ -1,0 +1,48 @@
+.Community {
+	figure {
+		height: 400px;
+	}
+	.inputBox {
+		border: 1px solid #aaa;
+		padding: 30px;
+		margin-bottom: 50px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		input,
+		textarea {
+			background: #f4ede5;
+			height: 30px;
+			margin-right: 10px;
+			padding-left: 5px;
+			border: none;
+			border-bottom: 1px solid #555;
+		}
+		textarea {
+			resize: none;
+			padding-top: 6px;
+			width: 100%;
+		}
+		button {
+			margin-right: 10px;
+			background: #f4ede5;
+			width: 100px;
+			background: #a52f1d;
+			border: none;
+			color: #fff;
+		}
+	}
+	.showBox {
+		border: 1px solid #aaa;
+		padding: 50px;
+		h1 {
+			font: 30px/1 'arial';
+		}
+
+		> article {
+			border: 1px solid #ccc;
+			padding: 30px;
+			margin-bottom: 20px;
+		}
+	}
+}

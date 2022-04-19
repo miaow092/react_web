@@ -15,27 +15,19 @@
 				right: 0;
 				margin-bottom: 20px;
 				color: #111;
-				transition: 1s;
+				transition: 0.5s;
 				cursor: pointer;
 				position: relative;
-
-				&::after {
-					display: block;
-					content: 'PLAY';
-					width: 100px;
-					height: 100px;
-					position: absolute;
-					top: 0;
-					left: 0;
-					font-size: 100px;
-					color: #85abbd;
-					padding: 20px;
-					z-index: 10;
-				}
-
-				&:hover {
-					height: 500px;
-				}
+			}
+			a {
+				position: absolute;
+				top: 225px;
+				left: 50%;
+				transform: translateX(-50%);
+				color: red;
+				font-size: 50px;
+				opacity: 0;
+				transition: 0.2s 0.3s;
 			}
 			h2 {
 				font: 30px/1 'Bellefair';
@@ -51,6 +43,13 @@
 				font: 15px/1 'arial';
 				color: #333;
 				margin-bottom: 20px;
+			}
+			&:hover img {
+				height: 500px;
+				filter: grayscale(0.7);
+			}
+			&:hover a {
+				opacity: 1;
 			}
 		}
 	}
