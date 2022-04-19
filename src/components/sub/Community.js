@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import Layout from '../common/Layout';
 
-function Account() {
+const path = process.env.PUBLIC_URL;
+
+function Community() {
 	//qureyselect같은 것. 지정해줄 가상 dom의 위치를 정해줄 수 있는 변수
 	const input = useRef(null);
 	const textarea = useRef(null);
@@ -44,7 +46,7 @@ function Account() {
 		setposts([{ title: inputVal, content: textareaVal }, ...posts]);
 		resetPost();
 	};
-	const deletePoset = (index) => {
+	const deletePost = (index) => {
 		setposts(posts.filter((_, idx) => idx !== index));
 	};
 	const disableUpdate = (index) => {
@@ -92,93 +94,145 @@ function Account() {
 
 	return (
 		<Layout name={'Community'}>
-			<div class='content_sub_cs'>
-				<div class='inner'>
-					<h1>Customer Service</h1>
-					<div class='cs'>
-						<div class='call'>
-							<div class='text'>
-								<p>telephone connection</p>
-								<a href='#'>MORE</a>
-							</div>
-							<div class='icon'>
-								<a href='#'>
-									<i class='fa-solid fa-phone-volume'></i>
-								</a>
-							</div>
+			<div className='content_sub_cs'>
+				<h1>Customer Service</h1>
+				<div className='cs'>
+					<div className='call'>
+						<div className='text'>
+							<p>telephone connection</p>
+							<a href='#'>MORE</a>
 						</div>
-						<div class='inquiry'>
-							<div class='text'>
-								<p>1:1 inquiry</p>
-								<a href='#'>MORE</a>
-							</div>
-							<div class='icon'>
-								<i class='fa-solid fa-message'></i>
-							</div>
-						</div>
-						<div class='kakao'>
-							<div class='text'>
-								<p>Kakao Talk counseling</p>
-								<a href='#'>MORE</a>
-							</div>
-							<div class='icon'>
-								<i class='fa-solid fa-comment-dots'></i>
-							</div>
+						<div className='icon'>
+							<a href='#'>
+								<i className='fa-solid fa-phone-volume'></i>
+							</a>
 						</div>
 					</div>
-					<p>consultation time AM 10:00 - PM 17:00</p>
-					<p>lunch break AM 12:00 - PM 13:00</p>
+					<div className='inquiry'>
+						<div className='text'>
+							<p>1:1 inquiry</p>
+							<a href='#'>MORE</a>
+						</div>
+						<div className='icon'>
+							<i className='fa-solid fa-message'></i>
+						</div>
+					</div>
+					<div className='kakao'>
+						<div className='text'>
+							<p>Kakao Talk counseling</p>
+							<a href='#'>MORE</a>
+						</div>
+						<div className='icon'>
+							<i className='fa-solid fa-comment-dots'></i>
+						</div>
+					</div>
 				</div>
+				<p>consultation time AM 10:00 - PM 17:00</p>
+				<p>lunch break AM 12:00 - PM 13:00</p>
 			</div>
 
-			<div class='content_sub_tab'>
-				<div class='inner'>
-					<div class='wrap'>
-						<div class='img'>
-							<img src='img/error.jpeg' />
+			<div className='content_sub_tab'>
+				<div className='wrap'>
+					<div className='img'>
+						<img src={`${path}/img/error.jpeg`} />
+					</div>
+					<div className='tab'>
+						<div className='community_search'>
+							<div className='input'>
+								<input type='text' placeholder='your name' ref={input} />
+								<textarea
+									cols='30'
+									rows='10'
+									placeholder='Pleace enter yout comments'
+									ref={textarea}></textarea>
+							</div>
+							<div className='button'>
+								<button onClick={resetPost}>cancel</button>
+								<button onClick={cratePost}>creat</button>
+							</div>
 						</div>
-						<div class='tab'>
-							<div class='community_search'>
-								<div className='inputBox'>
-									<input type='text' placeholder='your name' ref={input} />
-									<textarea
-										cols='30'
-										rows='10'
-										placeholder='Pleace enter yout comments'
-										ref={textarea}></textarea>
-									<button onClick={resetPost}>cancel</button>
-									<button onClick={cratePost}>creat</button>
+
+						<div className='community_tab'>
+							<h1>Community</h1>
+							<ul className='nav'>
+								<li className='on'>
+									<a href='#'>Q&A</a>
+								</li>
+								<li>
+									<a href='#'>payment</a>
+								</li>
+								<li>
+									<a href='#'>exchange</a>
+								</li>
+								<li>
+									<a href='#'>shopping</a>
+								</li>
+							</ul>
+
+							<article>
+								<div className='on'>
+									{posts.map((post, idx) => {
+										//본문에서 줄바꿈되는 부분인 이스케이프 문자를 기준점으로 해서 배열로 분리
+										let con = post.content.split('\n');
+
+										return (
+											<article key={idx}>
+												{post.enableUpdate ? (
+													// 수정모드
+													<>
+														<input
+															type='text'
+															defaultValue={post.title}
+															ref={editInput}
+														/>
+														<br />
+														<textarea
+															defaultValue={post.content}
+															ref={editTextarea}></textarea>
+
+														<div className='btns'>
+															<button onClick={() => disableUpdate(idx)}>
+																cancel
+															</button>
+															<button onClick={() => updatePost(idx)}>
+																save
+															</button>
+														</div>
+													</>
+												) : (
+													// 출력모드
+													<>
+														<h2>{post.title}</h2>
+														<div>
+															{/* 분리된 문자열 배열을 반복처리하면서 br태그 연결해서 줄바꿈출력 */}
+															{con.map((txt, idx) => {
+																return (
+																	<p key={idx}>
+																		{txt}
+																		<br />
+																	</p>
+																);
+															})}
+														</div>
+
+														<div className='btns'>
+															<button onClick={() => enableUpdate(idx)}>
+																edit
+															</button>
+															<button onClick={() => deletePost(idx)}>
+																delete
+															</button>
+														</div>
+													</>
+												)}
+											</article>
+										);
+									})}
 								</div>
-
-								{/* <div class="search_bar">
-                                <p>FAQ SEARCH</p>
-                                <div class="bar"></div>
-                            </div> */}
-							</div>
-							<div class='community_tab'>
-								<h1>Community</h1>
-								<ul class='nav'>
-									<li class='on'>
-										<a href='#'>Q&A</a>
-									</li>
-									<li>
-										<a href='#'>payment</a>
-									</li>
-									<li>
-										<a href='#'>exchange</a>
-									</li>
-									<li>
-										<a href='#'>shopping</a>
-									</li>
-								</ul>
-
-								<article>
-									<div class='on'>tab1</div>
-									<div>tab2</div>
-									<div>tab3</div>
-									<div>tab4</div>
-								</article>
-							</div>
+								<div>tab2</div>
+								<div>tab3</div>
+								<div>tab4</div>
+							</article>
 						</div>
 					</div>
 				</div>
@@ -187,4 +241,4 @@ function Account() {
 	);
 }
 
-export default Account;
+export default Community;

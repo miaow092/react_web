@@ -1,104 +1,106 @@
-.wrap {
-	width: 100%;
-	&::after {
-		display: block;
-		content: '';
-		clear: both;
-	}
-	form {
-		width: 50%;
-		float: left;
-		fieldset {
-			border: none;
-			h1 {
-				margin-bottom: 20px;
-				label {
-					font: 25px/1 'Gilda Display';
-					color: #a52f1d;
-				}
-			}
-			textarea {
-				width: 100%;
-				background: #e7ddd4;
-				resize: none;
-				padding: 20px;
-				color: #555;
-				font: 12px/1.2 'Lato';
-			}
-			.agreement {
-				margin-bottom: 30px;
-				label {
-					font: 15px/1.2 'Lato';
-					color: #222;
-				}
-			}
-			table {
-				width: 100%;
-				&.t_id,
-				&.t_name,
-				&.t_password,
-				&.t_repassword {
-					width: 50%;
-					float: left;
-				}
-				th {
-					display: flex;
-					justify-content: left;
+.Join {
+	.wrap {
+		width: 100%;
+		&::after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+		form {
+			width: 50%;
+			float: left;
+			fieldset {
+				border: none;
+				h1 {
+					margin-bottom: 20px;
 					label {
-						font: 18px/1 'Gilda Display';
+						font: 25px/1 'Gilda Display';
 						color: #a52f1d;
-						position: relative;
-						left: 0;
 					}
 				}
-				input {
-					height: 30px;
+				textarea {
 					width: 100%;
 					background: #e7ddd4;
-					outline: none;
-					border: 1px solid #555;
-					margin-bottom: 20px;
-					padding-left: 5px;
-					&[name='birthday'] {
-						width: 33%;
-						float: left;
-						margin-right: 0.5%;
-						&:nth-child(3) {
-							margin-right: 0;
-						}
+					resize: none;
+					padding: 20px;
+					color: #555;
+					font: 12px/1.2 'Lato';
+				}
+				.agreement {
+					margin-bottom: 30px;
+					label {
+						font: 15px/1.2 'Lato';
+						color: #222;
 					}
 				}
-				p {
-					color: rgba(165, 47, 29, 0.6);
-					font: 13px/1 'Lato';
-					margin-top: -10px;
-					margin-bottom: 10px;
+				table {
+					width: 100%;
+					&.t_id,
+					&.t_name,
+					&.t_password,
+					&.t_repassword {
+						width: 50%;
+						float: left;
+					}
+					th {
+						display: flex;
+						justify-content: left;
+						label {
+							font: 18px/1 'Gilda Display';
+							color: #a52f1d;
+							position: relative;
+							left: 0;
+						}
+					}
+					input {
+						height: 30px;
+						width: 100%;
+						background: #e7ddd4;
+						outline: none;
+						border: 1px solid #555;
+						margin-bottom: 20px;
+						padding-left: 5px;
+						&[name='birthday'] {
+							width: 33%;
+							float: left;
+							margin-right: 0.5%;
+							&:nth-child(3) {
+								margin-right: 0;
+							}
+						}
+					}
+					p {
+						color: rgba(165, 47, 29, 0.6);
+						font: 13px/1 'Lato';
+						margin-top: -10px;
+						margin-bottom: 10px;
+					}
+				}
+				input[type='submit'],
+				input[type='reset'] {
+					background-color: #a52f1d;
+					border: none;
+					padding: 5px 50px;
+					color: #fff;
+					font: 18px/1 'Gilda Display';
+					transition: 0.3s;
+					float: right;
+					margin-left: 10px;
 				}
 			}
-			input[type='submit'],
-			input[type='reset'] {
-				background-color: #a52f1d;
-				border: none;
-				padding: 5px 50px;
-				color: #fff;
-				font: 18px/1 'Gilda Display';
-				transition: 0.3s;
-				float: right;
-				margin-left: 10px;
-			}
 		}
-	}
 
-	.pic {
-		width: 50%;
-		height: 100%;
-		float: left;
-		display: flex;
-		justify-content: center;
-		img {
-			width: 80%;
-			height: 600px;
-			clip-path: inset(1px 30px 1px 30px round 40%);
+		.pic {
+			width: 50%;
+			height: 100%;
+			float: left;
+			display: flex;
+			justify-content: center;
+			img {
+				width: 80%;
+				height: 600px;
+				clip-path: inset(1px 30px 1px 30px round 40%);
+			}
 		}
 	}
 }

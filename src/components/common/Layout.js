@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+const path = process.env.PUBLIC_URL;
+
 function Layout(props) {
 	let frame = useRef(null);
 
@@ -10,7 +12,7 @@ function Layout(props) {
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
 			<figure>
-				<img src={`${props.src}`} />
+				<img src={`${path}/img/sub2.jpeg`} />
 			</figure>
 			<div className='inner'>{props.children}</div>
 		</section>

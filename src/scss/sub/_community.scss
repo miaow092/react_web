@@ -1,48 +1,186 @@
 .Community {
-	figure {
-		height: 400px;
-	}
-	.inputBox {
-		border: 1px solid #aaa;
-		padding: 30px;
-		margin-bottom: 50px;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		input,
-		textarea {
-			background: #f4ede5;
-			height: 30px;
-			margin-right: 10px;
-			padding-left: 5px;
-			border: none;
-			border-bottom: 1px solid #555;
-		}
-		textarea {
-			resize: none;
-			padding-top: 6px;
-			width: 100%;
-		}
-		button {
-			margin-right: 10px;
-			background: #f4ede5;
-			width: 100px;
-			background: #a52f1d;
-			border: none;
-			color: #fff;
-		}
-	}
-	.showBox {
-		border: 1px solid #aaa;
-		padding: 50px;
-		h1 {
-			font: 30px/1 'arial';
-		}
+	.content_sub_cs {
+		background: #f3e9e0;
+		padding-bottom: 30px;
 
-		> article {
-			border: 1px solid #ccc;
-			padding: 30px;
+		h1 {
+			font: 25px/1 'Gilda Display';
+			color: #a52f1d;
 			margin-bottom: 20px;
+		}
+		.cs {
+			width: 100%;
+			height: 150px;
+			padding: 40px 0;
+			background: #e7ddd4;
+			display: flex;
+			margin-bottom: 20px;
+			.call,
+			.inquiry,
+			.kakao {
+				width: 33.33%;
+				display: flex;
+				justify-content: space-between;
+				padding: 0 40px;
+				border-right: 1px solid #bbb;
+			}
+			.kakao {
+				border-right: 0;
+			}
+			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				p {
+					font: 18px/1 'Lato';
+				}
+				a {
+					font: bold 20px/1 'Lato';
+					cursor: pointer;
+					color: #000;
+				}
+			}
+			.icon {
+				position: relative;
+				right: 0;
+				i {
+					font-size: 40px;
+					position: relative;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					color: #000;
+				}
+			}
+		}
+		> p {
+			font: 15px/1 'Lato';
+			margin-bottom: 10px;
+		}
+	}
+	.content_sub_tab {
+		padding-top: 30px;
+		border-top: 1px solid #aaa;
+		.wrap {
+			width: 100%;
+			&::after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+			.img {
+				width: 30%;
+				float: left;
+				height: 820px;
+				padding-right: 30px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.tab {
+				float: left;
+				width: 70%;
+				.community_search {
+					width: 100%;
+					height: 150px;
+					border: 1px solid #aaa;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-bottom: 20px;
+					padding: 0 20px;
+					.input {
+						display: flex;
+						margin-bottom: 10px;
+						input,
+						textarea {
+							height: 30px;
+							background: #f3e9e0;
+							margin-right: 10px;
+							padding-left: 10px;
+							border: 1px solid #aaa;
+							outline: none;
+						}
+						input {
+							width: 100px;
+						}
+						textarea {
+							width: 100%;
+							resize: none;
+							margin-right: 0;
+							padding-top: 5px;
+						}
+					}
+					.button {
+						display: flex;
+						justify-content: right;
+						button {
+							border: none;
+							background: #a52f1d;
+							color: #fff;
+							font: 15px/1 'Gilda Display';
+							padding: 10px 20px;
+							margin-right: 10px;
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+				.community_tab {
+					position: relative;
+					width: 100%;
+					height: 650px;
+					h1 {
+						font: 25px/30px 'Gilda Display';
+						width: 20%;
+						color: #a52f1d;
+						float: left;
+						margin-bottom: 10px;
+					}
+					.nav {
+						li {
+							float: left;
+							width: 20%;
+							height: 30px;
+							border-right: 1px solid #bbb;
+							&:nth-child(4) {
+								border-right: 0;
+							}
+
+							a {
+								text-align: center;
+								display: block;
+								font: 15px/30px 'Lato';
+								color: #000;
+								transition: 0.3s;
+							}
+							&.on a {
+								color: #a52f1d;
+							}
+						}
+					}
+					.aricle {
+						div {
+							width: 100%;
+							height: 600px;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							margin-top: 30px;
+							opacity: 1;
+							z-index: 1;
+
+							&.on {
+								z-index: 2;
+								opacity: 0;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
