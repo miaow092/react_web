@@ -5,13 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Header() {
 	return (
 		<header>
-			<div className='inner'>
-				<h1>
-					<NavLink exact to='/'>
-						✦ WILD FAWN ✦
-					</NavLink>
-				</h1>
-
+			<div className='header_inner'>
 				<ul className='menuWeb'>
 					<li>
 						<NavLink to='/about'>About</NavLink>
@@ -23,6 +17,11 @@ function Header() {
 						<NavLink to='/gallery'>Gallery</NavLink>
 					</li>
 				</ul>
+				<h1>
+					<NavLink exact to='/'>
+						✦ WILD FAWN ✦
+					</NavLink>
+				</h1>
 				<ul className='util'>
 					<li>
 						<NavLink to='/shop'>Shop</NavLink>

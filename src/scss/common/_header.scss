@@ -3,29 +3,35 @@ header {
 	height: 80px;
 	background: #f3e9e0;
 	position: relative;
-	.inner {
+	> .header_inner {
 		width: 1180px;
 		margin: 0 auto;
+		&::after {
+			display: block;
+			clear: both;
+			content: '';
+		}
+		.menuWeb {
+			float: left;
+			height: 80px;
+			li {
+				float: left;
+				margin-right: 20px;
+				a {
+					cursor: pointer;
+					font: bold 15px/80px 'Lato';
+					color: #333;
+				}
+			}
+		}
 		> h1 {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			a {
-				font: bold 20px/1 'Gilda Display';
+				font: bold 20px/80px 'Gilda Display';
 				color: #a52f1d;
-			}
-		}
-		.menuWeb {
-			float: left;
-			li {
-				float: left;
-				margin-right: 20px;
-				a {
-					cursor: pointer;
-					font: 15px/80px 'Lato';
-					color: #555;
-				}
 			}
 		}
 		.util {
@@ -35,8 +41,8 @@ header {
 				margin-left: 20px;
 				a {
 					cursor: pointer;
-					font: 15px/80px 'Lato';
-					color: #555;
+					font: bold 15px/80px 'Lato';
+					color: #333;
 				}
 			}
 		}

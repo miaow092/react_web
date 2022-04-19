@@ -6,9 +6,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Popup from './components/common/Popup';
 
-//main
-import Visual from './components/main/Visual';
-import Content from './components/main/Content';
+import Main from './components/main/Main';
 
 //sub
 import Youtube from './components/sub/Youtube';
@@ -24,13 +22,11 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/'>
-					<Header type={'main'} />
-					<Visual />
-					<Content />
+					<Main />
 				</Route>
 
 				<Route path='/'>
-					<Header type={'sub'} />
+					<Header />
 				</Route>
 			</Switch>
 

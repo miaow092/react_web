@@ -2,9 +2,9 @@ import React from 'react';
 
 function Visual() {
 	return (
-		<section>
-			<h1>Visual</h1>
-		</section>
+		<figure id='visual' className='myScroll'>
+			<h1>Figure</h1>
+		</figure>
 	);
 }
 

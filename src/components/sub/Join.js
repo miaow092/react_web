@@ -40,7 +40,7 @@ function Join() {
 					<fieldset>
 						<legend className='h'> 회원 가입 양식</legend>
 						<h1>
-							<label for='terms'>Check out the terms and conditions.</label>
+							<label htmlFor='terms'>Check out the terms and conditions.</label>
 						</h1>
 						<textarea name='terms' id='terms' cols='30' rows='10'>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
@@ -61,7 +61,7 @@ function Join() {
 						</textarea>
 						<div className='agreement'>
 							<input type='checkbox' name='agree' id='agree' />
-							<label for='agree'>I agree to the terms and conditions</label>
+							<label htmlFor='agree'>I agree to the terms and conditions</label>
 						</div>
 
 						<table className='t_name'>
@@ -69,7 +69,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='name'>NAME</label>
+										<label htmlFor='name'>NAME</label>
 									</th>
 								</tr>
 							</thead>
@@ -92,7 +92,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='id'>ID</label>
+										<label htmlFor='id'>ID</label>
 									</th>
 								</tr>
 							</thead>
@@ -115,7 +115,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='password'>PASSWORD</label>
+										<label htmlFor='password'>PASSWORD</label>
 									</th>
 								</tr>
 							</thead>
@@ -138,7 +138,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='re  password'>RE-PASSWORD</label>
+										<label htmlFor='re  password'>RE-PASSWORD</label>
 									</th>
 								</tr>
 							</thead>
@@ -161,7 +161,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='text'>E-MAIL</label>
+										<label htmlFor='text'>E-MAIL</label>
 									</th>
 								</tr>
 							</thead>
@@ -184,7 +184,7 @@ function Join() {
 							<thead>
 								<tr>
 									<th scope='col'>
-										<label for='ph'>PHONE NUMBER</label>
+										<label htmlFor='ph'>PHONE NUMBER</label>
 									</th>
 								</tr>
 							</thead>
