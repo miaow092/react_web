@@ -148,11 +148,21 @@
 		.member {
 			width: 100%;
 			height: 650px;
-			background: #730504;
+			background: #a52f1d;
 			overflow: hidden;
 			padding: 30px 100px;
 			position: relative;
-
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 200%;
+				height: 650px;
+				background: #a52f1d;
+				z-index: -1;
+			}
 			> h1 {
 				color: #fff;
 				text-align: center;

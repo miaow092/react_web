@@ -4,6 +4,7 @@ import Visual from './Visual';
 import Content from './Content';
 import Vids from './Vids';
 import Pics from './Pics';
+import Categories from './Categories';
 import Btns from './Btns';
 import Anime from '../../class/anim.js';
 
@@ -59,6 +60,7 @@ function Main() {
 			<Content />
 			<Vids />
 			<Pics />
+			<Categories />
 			<Btns setIndex={setIndex} />
 		</main>
 	);

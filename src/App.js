@@ -1,6 +1,9 @@
 import { Route, Switch } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './scss/style.scss';
+// import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/pagination';
 
 //common
 import Header from './components/common/Header';
@@ -36,7 +39,7 @@ function App() {
 			<Route path='/gallery' component={Gallery} />
 			<Route path='/about' component={About} />
 			<Route path='/community' component={Community} />
-			<Route path='/Location' component={Location} />
+			<Route path='/contactus' component={Location} />
 			<Route path='/join' component={Join} />
 			<Route path='/shop' component={Shop} />
 

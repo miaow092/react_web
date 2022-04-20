@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header() {
 	return (
-		<header>
+		<header className='myScroll'>
 			<div className='header_inner'>
 				<ul className='menuWeb'>
 					<li>
@@ -24,7 +24,7 @@ function Header() {
 				</h1>
 				<ul className='util'>
 					<li>
-						<NavLink to='/shop'>Shop</NavLink>
+						<NavLink to='/contactus'>Contact Us</NavLink>
 					</li>
 					<li>
 						<NavLink to='/community'>Community</NavLink>

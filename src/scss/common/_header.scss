@@ -3,7 +3,7 @@ header {
 	height: 80px;
 	background: #f3e9e0;
 	position: relative;
-	> .header_inner {
+	.header_inner {
 		width: 1180px;
 		margin: 0 auto;
 		&::after {

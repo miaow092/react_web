@@ -4,7 +4,6 @@ import Layout from '../common/Layout';
 const path = process.env.PUBLIC_URL;
 
 function Community() {
-	//qureyselect같은 것. 지정해줄 가상 dom의 위치를 정해줄 수 있는 변수
 	const input = useRef(null);
 	const textarea = useRef(null);
 	const editInput = useRef(null);
@@ -154,31 +153,31 @@ function Community() {
 
 						<div className='community_tab'>
 							<h1>Community</h1>
-							<ul className='nav'>
-								<li className='on'>
-									<a href='#'>Q&A</a>
-								</li>
-								<li>
-									<a href='#'>payment</a>
-								</li>
-								<li>
-									<a href='#'>exchange</a>
-								</li>
-								<li>
-									<a href='#'>shopping</a>
-								</li>
-							</ul>
+							<nav>
+								<ul className='nav'>
+									<li className='on'>
+										<a href='#'>Q&A</a>
+									</li>
+									<li>
+										<a href='#'>payment</a>
+									</li>
+									<li>
+										<a href='#'>exchange</a>
+									</li>
+									<li>
+										<a href='#'>shopping</a>
+									</li>
+								</ul>
+							</nav>
 
-							<article>
-								<div className='on'>
+							<section>
+								<article className='on'>
 									{posts.map((post, idx) => {
-										//본문에서 줄바꿈되는 부분인 이스케이프 문자를 기준점으로 해서 배열로 분리
 										let con = post.content.split('\n');
 
 										return (
-											<article key={idx}>
+											<article key={idx} className='line'>
 												{post.enableUpdate ? (
-													// 수정모드
 													<>
 														<input
 															type='text'
@@ -200,21 +199,13 @@ function Community() {
 														</div>
 													</>
 												) : (
-													// 출력모드
 													<>
 														<h2>{post.title}</h2>
 														<div>
-															{/* 분리된 문자열 배열을 반복처리하면서 br태그 연결해서 줄바꿈출력 */}
 															{con.map((txt, idx) => {
-																return (
-																	<p key={idx}>
-																		{txt}
-																		<br />
-																	</p>
-																);
+																return <p key={idx}>{txt}</p>;
 															})}
 														</div>
-
 														<div className='btns'>
 															<button onClick={() => enableUpdate(idx)}>
 																edit
@@ -228,11 +219,11 @@ function Community() {
 											</article>
 										);
 									})}
-								</div>
-								<div>tab2</div>
-								<div>tab3</div>
-								<div>tab4</div>
-							</article>
+								</article>
+								<article>tab2</article>
+								<article>tab3</article>
+								<article>tab4</article>
+							</section>
 						</div>
 					</div>
 				</div>
