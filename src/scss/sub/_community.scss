@@ -174,11 +174,34 @@
 							margin-top: 30px;
 							opacity: 0;
 							z-index: 1;
+							overflow-y: scroll;
 
 							.line {
+								padding: 20px;
 								background-color: #e7ddd4;
-								border: #000;
+								border: 1px solid #aaa;
 								margin-bottom: 10px;
+
+								input,
+								textarea {
+									height: 30px;
+									background: #f3e9e0;
+									margin-right: 10px;
+									padding-left: 10px;
+									border: 1px solid #aaa;
+									outline: none;
+								}
+								input {
+									width: 100px;
+									margin-bottom: 5px;
+								}
+								textarea {
+									width: 100%;
+									resize: none;
+									margin-right: 0;
+									padding-top: 5px;
+									margin-bottom: 20px;
+								}
 
 								h2 {
 									font: 25px/1 'arial';
@@ -189,7 +212,7 @@
 									font: 15px/1 'arial';
 									color: #333;
 									position: relative;
-									margin-bottom: 20px;
+									margin-bottom: 30px;
 								}
 								.btns {
 									position: relative;

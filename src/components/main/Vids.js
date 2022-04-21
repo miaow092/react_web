@@ -1,32 +1,46 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
+import { useState, useRef } from 'react';
 
-const path = process.env.PUBLIC_URL;
+import Popup from '../common/Popup';
 
 function Vids() {
+	const vidData = useSelector((state) => state.youtubeReducer.youtube);
+	const pop = useRef(null);
+	const [index, setIndex] = useState(0);
+
 	return (
-		<section id='vids' className='myScroll'>
-			<div className='inner'>
-				<div className='wrap'>
-					<article className='pic'>
-						<img src={`${path}/img/collavo.jpeg`} />
-					</article>
-					<article className='text'>
-						<h1>
-							Wild Fawn x Mira Lou
-							<br />
-							Collaboration
-						</h1>
-						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-							fugiat eaque dolor voluptatem, cupiditate nobis aspernatur ratione
-							eius voluptatum harum corrupti odio consequatur, tempore ullam
-							maiores iure ex at? Molestias.
-						</p>
-						<a href='#'>Explore</a>
-					</article>
-				</div>
-			</div>
-		</section>
+		<>
+			<section id='vids' className='myScroll'>
+				<h1>Recent Youtube</h1>
+				<ul className='vidList'>
+					{vidData.map((vid, idx) => {
+						if (idx < 3)
+							return (
+								<li
+									key={idx}
+									onClick={() => {
+										setIndex(idx);
+										pop.current.open();
+									}}>
+									<img src={vid.snippet.thumbnails.medium.url} />
+								</li>
+							);
+					})}
+				</ul>
+			</section>
+
+			<Popup ref={pop}>
+				{vidData.length !== 0 && (
+					<iframe
+						src={
+							'https://www.youtube.com/embed/' +
+							vidData[index].snippet.resourceId.videoId
+						}
+						frameBorder='0'></iframe>
+				)}
+				<span onClick={() => pop.current.close()}>close</span>
+			</Popup>
+		</>
 	);
 }
 

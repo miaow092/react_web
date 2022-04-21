@@ -1,29 +1,35 @@
-import React from 'react';
+import { useState, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import Layout from '../common/Layout';
-import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
 import Popup from '../common/Popup';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const path = process.env.PUBLIC_URL;
 
+// function Youtube() {
+// 	const pop = useRef(null);
+// 	const key = 'AIzaSyC6QtD-1n1UHsw8dD64nAkoS8BVKV5AV5M';
+// 	const playListId = 'PL-Cr7h7IRk-u_Ww5bM44hhX1vkx5ctUFC';
+// 	const num = 4;
+// 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxesRults=${num}`;
+
+// 	const [items, setItems] = useState([]);
+// 	const [index, setIndex] = useState(0);
+// 	const [loading, setLoading] = useState(false);
+
+// 	useEffect(() => {
+// 		axios.get(url).then((json) => {
+// 			setItems(json.data.items);
+// 		});
+// 	}, []);
+
 function Youtube() {
+	//해당 컴포넌트 함수 호출시 store로부터 youtube데이터를 useSelector로 가져옴
+	const vidData = useSelector((state) => state.youtubeReducer.youtube);
 	const pop = useRef(null);
-	const key = 'AIzaSyC6QtD-1n1UHsw8dD64nAkoS8BVKV5AV5M';
-	const playListId = 'PL-Cr7h7IRk-u_Ww5bM44hhX1vkx5ctUFC';
-	const num = 4;
-	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxesRults=${num}`;
-
-	const [items, setItems] = useState([]);
 	const [index, setIndex] = useState(0);
-	const [loading, setLoading] = useState(false);
-
-	useEffect(() => {
-		axios.get(url).then((json) => {
-			setItems(json.data.items);
-		});
-	}, []);
 
 	return (
 		<>
@@ -34,7 +40,7 @@ function Youtube() {
 				color={'#f4ede5'}
 				des={'Get ready-to-party with kits that make hosting easy and fun.'}>
 				<h1></h1>
-				{items.map((item, idx) => {
+				{vidData.map((item, idx) => {
 					const desc = item.snippet.description;
 					const date = item.snippet.publishedAt;
 
@@ -58,11 +64,11 @@ function Youtube() {
 			</Layout>
 
 			<Popup ref={pop}>
-				{loading && (
+				{vidData.length !== 0 && (
 					<iframe
 						src={
 							'https://www.youtube.com/embed/' +
-							items[index].snippet.resourceId.videoId
+							vidData[index].snippet.resourceId.videoId
 						}
 						frameBorder='0'></iframe>
 				)}

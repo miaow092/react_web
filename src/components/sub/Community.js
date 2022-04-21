@@ -138,7 +138,7 @@ function Community() {
 					<div className='tab'>
 						<div className='community_search'>
 							<div className='input'>
-								<input type='text' placeholder='your name' ref={input} />
+								<input type='text' placeholder='title' ref={input} />
 								<textarea
 									cols='30'
 									rows='10'
@@ -150,7 +150,6 @@ function Community() {
 								<button onClick={cratePost}>creat</button>
 							</div>
 						</div>
-
 						<div className='community_tab'>
 							<h1>Community</h1>
 							<nav>
