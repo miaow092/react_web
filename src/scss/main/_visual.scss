@@ -82,11 +82,11 @@
 					}
 				}
 				.back {
-					animation: background 1s ease 1s;
+					animation: background 1s ease 0.5s;
 					animation-fill-mode: forwards;
 				}
 				.des {
-					animation: rightMove 1s ease 1s;
+					animation: rightMove 1s ease 0.5s;
 					animation-fill-mode: forwards;
 				}
 			}

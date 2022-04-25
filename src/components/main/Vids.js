@@ -6,15 +6,16 @@ function Vids(props) {
 	const vidData = useSelector((state) => state.youtubeReducer.youtube);
 	const pop = useRef(null);
 	const [index, setIndex] = useState(0);
-	//현재 스크롤되고 있는 거리값
 	const scrolled = props.scrolled;
-	//해당 섹션의 세로 위치값
 	const start = props.posStart;
-	//스크롤 위치 보정값
-	//(양수: 기준점을 위로 끌어올림, 음수: 기준점을 아래로 내림)
 	const base = 300;
-	//보정값을 적용한 스크롤 거리값
 	const position = scrolled - start + base;
+
+	function getDate(날짜문자열) {
+		var week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		var dayOfWeek = week[new Date(날짜문자열).getDay()];
+		return dayOfWeek;
+	}
 
 	return (
 		<>
@@ -24,6 +25,8 @@ function Vids(props) {
 
 					<ul className='vidList'>
 						{vidData.map((vid, idx) => {
+							const desc = vid.snippet.description;
+							const date = vid.snippet.publishedAt;
 							if (idx < 3)
 								return (
 									<li key={idx}>
@@ -35,11 +38,17 @@ function Vids(props) {
 												}}
 												src={vid.snippet.thumbnails.medium.url}
 											/>
-											<span>{vid.snippet.publishedAt}</span>
+											<span>
+												{date.split('T')[0]}
+												<br />
+												<strong>{getDate(date.split('T')[0])}</strong>
+											</span>
 										</div>
 										<div className='text'>
 											<h2>{vid.snippet.title}</h2>
-											<p>{vid.snippet.description}</p>
+											<p>
+												{desc.length > 200 ? desc.substr(0, 200) + '...' : desc}
+											</p>
 											<span
 												onClick={() => {
 													setIndex(idx);

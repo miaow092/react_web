@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Layout from '../common/Layout';
+const path = process.env.PUBLIC_URL;
 
 function Content() {
-	//메인페이지에서 로컬스토리지에 접근해서 데이터 반환
 	const getLocalData = () => {
 		const data = localStorage.getItem('posts');
 
@@ -21,10 +21,8 @@ function Content() {
 		}
 	};
 
-	//반환된 데이터를 state에 저장
 	const [posts] = useState(getLocalData);
 
-	//처음 로딩시 더미데이터를 state에 저장하자 마자 바로 로컬스토리지에 저장
 	useEffect(() => {
 		localStorage.setItem('posts', JSON.stringify(posts));
 	}, []);
@@ -33,6 +31,7 @@ function Content() {
 		<section id='news' className='myScroll'>
 			<div className='inner'>
 				<h1>Recent Community</h1>
+				<img className='pic' src={`${path}/img/sub1.jpeg`} />
 				<ul>
 					{posts.map((post, idx) => {
 						if (idx < 4) {

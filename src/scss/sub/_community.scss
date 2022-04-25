@@ -34,7 +34,7 @@
 				p {
 					font: 18px/1 'Lato';
 				}
-				a {
+				.link {
 					font: bold 20px/1 'Lato';
 					cursor: pointer;
 					color: #000;
@@ -43,14 +43,10 @@
 			.icon {
 				position: relative;
 				right: 0;
-				i {
-					font-size: 40px;
-					position: relative;
-					top: 50%;
-					right: 0;
-					transform: translateY(-50%);
-					color: #000;
-				}
+
+				font-size: 50px;
+
+				color: #000;
 			}
 		}
 		> p {
@@ -96,6 +92,7 @@
 						margin-bottom: 10px;
 						input,
 						textarea {
+							font-family: 'Gilda Display';
 							height: 30px;
 							background: #f3e9e0;
 							margin-right: 10px;
@@ -184,6 +181,7 @@
 
 								input,
 								textarea {
+									font-family: 'Gilda Display';
 									height: 30px;
 									background: #f3e9e0;
 									margin-right: 10px;
@@ -204,12 +202,12 @@
 								}
 
 								h2 {
-									font: 25px/1 'arial';
+									font: 25px/1 'Gilda Display';
 									position: relative;
 									margin-bottom: 5px;
 								}
 								p {
-									font: 15px/1 'arial';
+									font: 15px/1 'Lato';
 									color: #333;
 									position: relative;
 									margin-bottom: 30px;
@@ -218,6 +216,7 @@
 									position: relative;
 									left: 0;
 									button {
+										font-family: 'Gilda Display';
 										background: #a52f1d;
 										border: none;
 										margin-right: 10px;

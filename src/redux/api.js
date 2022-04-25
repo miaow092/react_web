@@ -1,5 +1,4 @@
 import axios from 'axios';
-const path = process.env.PUBLIC_URL;
 
 export const getFlickr = async (opt) => {
 	const key = '554ae9d07ac78ae8534bc6998305d288';

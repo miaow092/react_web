@@ -1,5 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import Layout from '../common/Layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { faHeadset } from '@fortawesome/free-solid-svg-icons';
+import { faCommentSms } from '@fortawesome/free-solid-svg-icons';
 
 const path = process.env.PUBLIC_URL;
 
@@ -13,11 +17,27 @@ function Community() {
 		const data = localStorage.getItem('posts');
 
 		const dummyData = [
-			{ title: 'Hello5', content: 'Here comes description in detail.' },
-			{ title: 'Hello4', content: 'Here comes description in detail.' },
-			{ title: 'Hello3', content: 'Here comes description in detail.' },
-			{ title: 'Hello2', content: 'Here comes description in detail.' },
-			{ title: 'Hello1', content: 'Here comes description in detail.' },
+			{
+				title: 'collaboration product',
+				content:
+					'When are you going to start selling limited edition collaboration items?',
+			},
+			{
+				title: 'complain',
+				content: 'I have a complaint to make to our company about the service.',
+			},
+			{
+				title: 'Out of stock',
+				content: 'The product I want is out of stock, when will it come in?',
+			},
+			{
+				title: 'about the size',
+				content: 'I want to know the size of the ring the model is wearing',
+			},
+			{
+				title: 'take back',
+				content: 'I like to return the item because it has a defect.',
+			},
 		];
 
 		if (data) {
@@ -62,7 +82,7 @@ function Community() {
 
 		{
 			if (!inputVal || !textareaVal) {
-				alert('asdf');
+				alert('텍스트를 입력해 주세요');
 				return;
 			}
 		}
@@ -99,30 +119,28 @@ function Community() {
 					<div className='call'>
 						<div className='text'>
 							<p>telephone connection</p>
-							<a href='#'>MORE</a>
+							<span className='link'>MORE</span>
 						</div>
 						<div className='icon'>
-							<a href='#'>
-								<i className='fa-solid fa-phone-volume'></i>
-							</a>
+							<FontAwesomeIcon icon={faPhoneVolume} />
 						</div>
 					</div>
 					<div className='inquiry'>
 						<div className='text'>
 							<p>1:1 inquiry</p>
-							<a href='#'>MORE</a>
+							<span className='link'>MORE</span>
 						</div>
 						<div className='icon'>
-							<i className='fa-solid fa-message'></i>
+							<FontAwesomeIcon icon={faHeadset} />
 						</div>
 					</div>
 					<div className='kakao'>
 						<div className='text'>
 							<p>Kakao Talk counseling</p>
-							<a href='#'>MORE</a>
+							<span className='link'>MORE</span>
 						</div>
 						<div className='icon'>
-							<i className='fa-solid fa-comment-dots'></i>
+							<FontAwesomeIcon icon={faCommentSms} />
 						</div>
 					</div>
 				</div>

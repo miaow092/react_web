@@ -12,14 +12,14 @@ function Pics() {
 						{flickr.map((item, idx) => {
 							if (idx < 4) {
 								return (
-									<li key={idx}>
-										<div className='pic'>
+									<>
+										<li key={idx}>
 											<img
-												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`}
 											/>
-										</div>
-										<h2>{item.title}</h2>
-									</li>
+											<h2>{item.title}</h2>
+										</li>
+									</>
 								);
 							}
 						})}
