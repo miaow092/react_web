@@ -11,7 +11,6 @@ export const setYoutube = (data) => {
 	};
 };
 
-//액션 타입 세계. 에이피아이 요청, 성공, 실패
 export const FLICKR_STAR = 'FLICKR_STAR';
 export const FLICKR_SUCCESS = 'FLICKR_SUCCESS';
 export const FLICKR_FAIL = 'FLICKR_FAIL';

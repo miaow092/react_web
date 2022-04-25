@@ -1,9 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 const path = process.env.PUBLIC_URL;
 
 function About() {
@@ -71,21 +68,17 @@ function About() {
 						<h1>Meet Ours Hosts</h1>
 						{members.map((member, idx) => {
 							return (
-								<li key={idx}>
-									<img src={`${path}/img/${member.pic}`} />
-									<h2>{member.name}</h2>
-									<p>{member.position}</p>
-								</li>
+								<div className='wrap'>
+									<li key={idx}>
+										<img src={`${path}/img/${member.pic}`} />
+										<h2>{member.name}</h2>
+										<p>{member.position}</p>
+									</li>
+								</div>
 							);
 						})}
 					</ul>
 				</div>
-				<button className='prev'>
-					<FontAwesomeIcon icon={faArrowLeft} />
-				</button>
-				<button className='next'>
-					<FontAwesomeIcon icon={faArrowRight} />
-				</button>
 			</section>
 		</Layout>
 	);
