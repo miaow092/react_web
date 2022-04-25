@@ -1,32 +1,32 @@
-import React from 'react';
-
-const path = process.env.PUBLIC_URL;
+import { useSelector } from 'react-redux';
 
 function Pics() {
+	const { flickr } = useSelector((state) => state.flickrReducer);
+
 	return (
-		<section id='pics' className='myScroll'>
-			<div className='pics_inner'>
-				<h1>Our Favorites</h1>
-				<div className='wrap'>
-					<article className='favItem'>
-						<img src={`${path}/img/fav1.jpeg`} />
-						<h2>ring earrings with pearls</h2>
-						<p>$41.49</p>
-					</article>
-					<article className='favItem'>
-						<img src={`${path}/img/fav2.jpeg`} />
-						<h2>chain gold necklace with pearls</h2>
-						<p>$205.49</p>
-					</article>
-					<article className='favItem'>
-						<img src={`${path}/img/fav3.jpeg`} />
-						<h2>golden Eternity Ring</h2>
-						<p>$41.49</p>
-					</article>
+		<>
+			<section id='pics' className='myScroll'>
+				<div className='inner'>
+					<h1>Recent Gallery</h1>
+					<ul>
+						{flickr.map((item, idx) => {
+							if (idx < 4) {
+								return (
+									<li key={idx}>
+										<div className='pic'>
+											<img
+												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+											/>
+										</div>
+										<h2>{item.title}</h2>
+									</li>
+								);
+							}
+						})}
+					</ul>
 				</div>
-				<a href='#'>See All</a>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }
 

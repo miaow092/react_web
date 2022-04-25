@@ -11,6 +11,11 @@ ol {
 a {
 	text-decoration: none;
 }
+.wrap::after {
+	content: '';
+	display: block;
+	clear: both;
+}
 .h {
 	opacity: 0;
 	position: absolute;

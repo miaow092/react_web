@@ -32,8 +32,7 @@ function Content() {
 	return (
 		<section id='news' className='myScroll'>
 			<div className='inner'>
-				<h1>Recent News</h1>
-
+				<h1>Recent Community</h1>
 				<ul>
 					{posts.map((post, idx) => {
 						if (idx < 4) {

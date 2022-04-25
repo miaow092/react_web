@@ -60,7 +60,6 @@ function Main() {
 			<Content />
 			<Vids />
 			<Pics />
-			<Categories />
 			<Btns setIndex={setIndex} />
 		</main>
 	);

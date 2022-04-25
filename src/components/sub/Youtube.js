@@ -8,23 +8,6 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const path = process.env.PUBLIC_URL;
 
-// function Youtube() {
-// 	const pop = useRef(null);
-// 	const key = 'AIzaSyC6QtD-1n1UHsw8dD64nAkoS8BVKV5AV5M';
-// 	const playListId = 'PL-Cr7h7IRk-u_Ww5bM44hhX1vkx5ctUFC';
-// 	const num = 4;
-// 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxesRults=${num}`;
-
-// 	const [items, setItems] = useState([]);
-// 	const [index, setIndex] = useState(0);
-// 	const [loading, setLoading] = useState(false);
-
-// 	useEffect(() => {
-// 		axios.get(url).then((json) => {
-// 			setItems(json.data.items);
-// 		});
-// 	}, []);
-
 function Youtube() {
 	//해당 컴포넌트 함수 호출시 store로부터 youtube데이터를 useSelector로 가져옴
 	const vidData = useSelector((state) => state.youtubeReducer.youtube);

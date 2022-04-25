@@ -1,97 +1,95 @@
 .Gallery {
+	.inner {
+		min-height: 600px;
+	}
 	.loading {
 		position: fixed;
-		top: -200px;
+		top: 200px;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: -1;
-		width: 300px;
+		width: 150px;
 	}
-	> .inner {
-		min-height: 600px;
-		.searchBox {
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			padding: 30px 5px;
+	.searchBox {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 80px;
 
-			input {
-				height: 30px;
-				width: 30%;
-				border: none;
-				background: #f3e9e0;
-				border-bottom: 1px solid #a52f1d;
-				margin-right: 20px;
-				outline: none;
-			}
-			.btnSearch {
-				background: #f3e9e0;
-				width: 100px;
-				font-size: 20px;
-				font: 20px/1 'Gilda Display';
-				border: 1px solid #a52f1d;
-				background: #a52f1d;
-				color: #fff;
-			}
+		input {
+			height: 30px;
+			width: 30%;
+			border: none;
+			background: #f3e9e0;
+			border-bottom: 1px solid #a52f1d;
+			margin-right: 20px;
+			outline: none;
+		}
+		button {
+			width: 120px;
+			font: 15px/30px 'Lato';
+			border: none;
+			background: #a52f1d;
+			color: #fff;
+			margin-right: 10px;
+		}
+	}
+
+	.frame {
+		// transform: translateY(200px);
+		// opacity: 0;
+		transition: 1s;
+
+		&.on {
+			transform: translateY(0px);
+			opacity: 1;
 		}
 
-		.frame {
-			transform: translateY(200px);
-			opacity: 0;
-			transition: 1s;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
 
-			&.on {
-				transform: translateY(0px);
-				opacity: 1;
-			}
-
-			&::after {
-				content: '';
-				display: block;
-				clear: both;
-			}
-
-			article {
-				width: 25%;
-				float: left;
+		li {
+			width: 25%;
+			float: left;
+			padding: 10px;
+			.p_inner {
+				background: #fff;
 				padding: 10px;
-
-				> .inner {
-					width: 100%;
-					background: #fff;
+				width: 100%;
+				.wrap {
 					padding: 10px;
-					.wrap {
+					width: 100%;
+					border: 1px solid #f3e9e0;
+					> .pic {
 						width: 100%;
-						padding: 10px 10px 0 10px;
-						border: 1px solid #f3e9e0;
-						> .pic {
-							width: 100%;
-							margin-bottom: 10px;
-							cursor: pointer;
+						margin-bottom: 10px;
+						cursor: pointer;
 
-							img {
-								width: 100%;
-								filter: grayscale(1);
-							}
+						img {
+							width: 100%;
+							filter: grayscale(1);
 						}
 					}
-					h2 {
-						font: normal 14px/1.2 'Gilda Display';
-						color: #a52f1d;
-						padding-top: 10px;
-					}
 				}
+			}
+			h2 {
+				font: normal 14px/1.2 'Gilda Display';
+				color: #a52f1d;
+				padding-top: 10px;
+			}
 
-				&:hover {
-					> .inner {
-						background: #a52f1d;
-						.pic {
-							img {
-								filter: grayscale(0);
-							}
-							h2 {
-								color: #fff;
-							}
+			&:hover {
+				.p_inner {
+					background: #a52f1d;
+					.pic {
+						img {
+							filter: grayscale(0);
+						}
+						h2 {
+							color: #fff;
 						}
 					}
 				}

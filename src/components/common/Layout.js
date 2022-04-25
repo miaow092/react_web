@@ -13,6 +13,10 @@ function Layout(props) {
 		<section className={`content ${props.name}`} ref={frame}>
 			<figure>
 				<img src={`${path}/img/sub2.jpeg`} />
+				<h1>
+					{props.title}
+					<p>{props.des}</p>
+				</h1>
 			</figure>
 			<div className='inner'>{props.children}</div>
 		</section>

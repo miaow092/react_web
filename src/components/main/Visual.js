@@ -30,7 +30,9 @@ function Visual() {
 				modules={[EffectCoverflow, Pagination, Navigation]}
 				className='mySwiper'>
 				<SwiperSlide>
-					<img src={`${path}/img/main_c1.jpeg`} />
+					<div className='pic'>
+						<img src={`${path}/img/main_c1.jpeg`} />
+					</div>
 					<div className='text'>
 						<h1>
 							Nadiia for
@@ -49,7 +51,9 @@ function Visual() {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/main_c10.jpeg`} />
+					<div className='pic'>
+						<img src={`${path}/img/main_c1.jpeg`} />
+					</div>
 					<div className='text'>
 						<h1>
 							Nadiia for
@@ -68,7 +72,9 @@ function Visual() {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/main_c3.jpeg`} />
+					<div className='pic'>
+						<img src={`${path}/img/main_c1.jpeg`} />
+					</div>
 					<div className='text'>
 						<h1>
 							Nadiia for
@@ -87,7 +93,9 @@ function Visual() {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/main_c8.jpeg`} />
+					<div className='pic'>
+						<img src={`${path}/img/main_c1.jpeg`} />
+					</div>
 					<div className='text'>
 						<h1>
 							Nadiia for
@@ -106,7 +114,9 @@ function Visual() {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/main_c9.jpeg`} />
+					<div className='pic'>
+						<img src={`${path}/img/main_c1.jpeg`} />
+					</div>
 					<div className='text'>
 						<h1>
 							Nadiia for
