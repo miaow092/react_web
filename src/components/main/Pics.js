@@ -10,16 +10,14 @@ function Pics() {
 					<h1>Recent Gallery</h1>
 					<ul>
 						{flickr.map((item, idx) => {
-							if (idx < 4) {
+							if (idx < 5) {
 								return (
-									<>
-										<li key={idx}>
-											<img
-												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`}
-											/>
-											<h2>{item.title}</h2>
-										</li>
-									</>
+									<li key={idx}>
+										<img
+											src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`}
+										/>
+										<h2>{item.title}</h2>
+									</li>
 								);
 							}
 						})}

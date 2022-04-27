@@ -39,7 +39,7 @@
 						color: #333;
 						text-align: left;
 						opacity: 0;
-						transition: opacity 1s ease 0.3s;
+						transition: opacity 1s ease 0.5s;
 					}
 				}
 				.back {
@@ -137,5 +137,140 @@
 	100% {
 		transform: translateX(0);
 		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1179px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					width: 100%;
+					.pic {
+						width: 48%;
+					}
+					.des {
+						width: 100%;
+						padding-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 929px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						width: 60%;
+					}
+
+					.text {
+						bottom: calc(30vh - 110px);
+						h1 {
+							font: 90px/1 'Gilda Display';
+						}
+					}
+					.des {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.text {
+						bottom: calc(30vh - 97px);
+						h1 {
+							font: 80px/1 'Gilda Display';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 679px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						width: 70%;
+					}
+					.text {
+						bottom: calc(30vh - 97px);
+						h1 {
+							font: 80px/1 'Gilda Display';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 649px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.text {
+						bottom: calc(30vh - 87px);
+						h1 {
+							font: 70px/1 'Gilda Display';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 539px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						width: 90%;
+					}
+					.text {
+						bottom: calc(30vh - 72px);
+						h1 {
+							font: 60px/1 'Gilda Display';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 449px) {
+	#visual {
+		.mySwiper {
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						width: 95%;
+					}
+					.text {
+						bottom: calc(30vh - 62px);
+						h1 {
+							font: 50px/1 'Gilda Display';
+						}
+					}
+				}
+			}
+		}
 	}
 }

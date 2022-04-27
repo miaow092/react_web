@@ -1,6 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 const path = process.env.PUBLIC_URL;
 
 function About() {
@@ -66,17 +66,17 @@ function About() {
 				<div className='memberList'>
 					<ul>
 						<h1>Meet Ours Hosts</h1>
-						{members.map((member, idx) => {
-							return (
-								<div className='wrap'>
+						<div className='wrap'>
+							{members.map((member, idx) => {
+								return (
 									<li key={idx}>
 										<img src={`${path}/img/${member.pic}`} />
 										<h2>{member.name}</h2>
 										<p>{member.position}</p>
 									</li>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
 					</ul>
 				</div>
 			</section>

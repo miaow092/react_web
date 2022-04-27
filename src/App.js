@@ -8,7 +8,9 @@ import './scss/style.scss';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Popup from './components/common/Popup';
+import Menu from './components/common/Menu';
 
+//main
 import Main from './components/main/Main';
 
 //sub

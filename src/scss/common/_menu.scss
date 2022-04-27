@@ -1,0 +1,33 @@
+#Menu {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #a52f1d;
+	z-index: 20;
+	padding: 50px;
+	text-align: center;
+	overflow: hidden;
+	h1 {
+		a {
+			font: 100px/1 'Gilda Display';
+			color: #fff;
+		}
+	}
+
+	#gnb {
+		li {
+			a {
+				color: #fff;
+			}
+		}
+	}
+	span {
+		color: #fff;
+		font-size: 100px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

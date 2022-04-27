@@ -46,5 +46,37 @@ header {
 				}
 			}
 		}
+		.fa-bars {
+			font-size: 20px;
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+			display: none;
+			color: #a52f1d;
+			cursor: pointer;
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: 1179px) {
+	header {
+		.header_inner {
+			width: 100%;
+			margin: 0 auto;
+			.menuWeb {
+				display: none;
+			}
+			> h1 {
+				left: 0;
+				transform: translate(10%, -50%);
+			}
+			.util {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
 	}
 }

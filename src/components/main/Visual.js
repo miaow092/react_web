@@ -52,7 +52,7 @@ function Visual() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='pic'>
-						<img src={`${path}/img/main_c1.jpeg`} />
+						<img src={`${path}/img/main_c2.jpeg`} />
 					</div>
 					<div className='text'>
 						<h1>
@@ -73,7 +73,7 @@ function Visual() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='pic'>
-						<img src={`${path}/img/main_c1.jpeg`} />
+						<img src={`${path}/img/main_c3.jpeg`} />
 					</div>
 					<div className='text'>
 						<h1>
@@ -94,7 +94,7 @@ function Visual() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='pic'>
-						<img src={`${path}/img/main_c1.jpeg`} />
+						<img src={`${path}/img/main_c4.jpeg`} />
 					</div>
 					<div className='text'>
 						<h1>
@@ -115,7 +115,7 @@ function Visual() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='pic'>
-						<img src={`${path}/img/main_c1.jpeg`} />
+						<img src={`${path}/img/main_c5.jpeg`} />
 					</div>
 					<div className='text'>
 						<h1>

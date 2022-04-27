@@ -21,3 +21,13 @@
 		}
 	}
 }
+@media screen and (max-width: 1179px) {
+	.btns {
+		right: 10px;
+	}
+}
+@media screen and (max-width: 539px) {
+	.btns {
+		display: none;
+	}
+}
