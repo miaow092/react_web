@@ -19,7 +19,7 @@ function Gallery() {
 	}, []);
 
 	return (
-		<Layout name={'Gallery'}>
+		<Layout name={'Gallery'} title={'Gallery'} des={'aout sintek fnatastic'}>
 			<div className='frame on'>
 				{items.map((item, idx) => {
 					return (

@@ -14,7 +14,9 @@ function Visual() {
 				effect={'coverflow'}
 				spaceBetween={40}
 				grabCursor={true}
-				pagination={true}
+				pagination={{
+					type: 'fraction',
+				}}
 				navigation={true}
 				loop={true}
 				centeredSlides={true}
@@ -39,7 +41,9 @@ function Visual() {
 							<br /> WILD FAWN
 						</h1>
 					</div>
-					<div className='back'></div>
+					<div className='back'>
+						<img src={`${path}/img/main_b1.jpeg`} />
+					</div>
 					<div className='des'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
@@ -60,7 +64,9 @@ function Visual() {
 							<br /> WILD FAWN
 						</h1>
 					</div>
-					<div className='back'></div>
+					<div className='back'>
+						<img src={`${path}/img/main_b2.jpeg`} />
+					</div>
 					<div className='des'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
@@ -81,7 +87,9 @@ function Visual() {
 							<br /> WILD FAWN
 						</h1>
 					</div>
-					<div className='back'></div>
+					<div className='back'>
+						<img src={`${path}/img/main_b3.jpeg`} />
+					</div>
 					<div className='des'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
@@ -102,7 +110,9 @@ function Visual() {
 							<br /> WILD FAWN
 						</h1>
 					</div>
-					<div className='back'></div>
+					<div className='back'>
+						<img src={`${path}/img/main_b4.jpeg`} />
+					</div>
 					<div className='des'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
@@ -123,7 +133,9 @@ function Visual() {
 							<br /> WILD FAWN
 						</h1>
 					</div>
-					<div className='back'></div>
+					<div className='back'>
+						<img src={`${path}/img/main_b5.jpeg`} />
+					</div>
 					<div className='des'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia

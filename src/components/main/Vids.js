@@ -6,10 +6,6 @@ function Vids(props) {
 	const vidData = useSelector((state) => state.youtubeReducer.youtube);
 	const pop = useRef(null);
 	const [index, setIndex] = useState(0);
-	const scrolled = props.scrolled;
-	const start = props.posStart;
-	const base = 300;
-	const position = scrolled - start + base;
 
 	function getDate(날짜문자열) {
 		var week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

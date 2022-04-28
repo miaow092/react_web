@@ -1,5 +1,5 @@
 #news {
-	background: #f3e9e0;
+	background: #e7ddd4;
 	padding: 100px 0;
 	.inner {
 		width: 1180px;
@@ -16,7 +16,6 @@
 			background: #a52f1d;
 			float: left;
 			margin-right: 20px;
-			filter: grayscale(0.7);
 		}
 		ul {
 			&::after {
@@ -29,12 +28,12 @@
 				width: calc(100% - 300px);
 				height: 100px;
 				margin-bottom: 20px;
-				background: #e7ddd4;
+				background: #f3e9e0;
+				box-shadow: 5px 5px 5px #888;
 				overflow: hidden;
 				padding: 10px;
 				display: flex;
 				flex-direction: column;
-				border: 3px solid #fff;
 				&:last-child {
 					margin-right: 0;
 				}
@@ -49,7 +48,6 @@
 				}
 
 				&:hover {
-					border: 3px solid #a52f1d;
 					background: rgba(165, 47, 29, 0.1);
 				}
 			}

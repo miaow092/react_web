@@ -78,7 +78,10 @@ function Location() {
 
 	return (
 		<>
-			<Layout name={'Location'}>
+			<Layout
+				name={'Location'}
+				title={'Contact Us'}
+				des={'aout sintek fnatastic'}>
 				<section className='content_location'>
 					<ul className='survice'>
 						<li>

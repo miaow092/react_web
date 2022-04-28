@@ -1,20 +1,21 @@
 //main
 import Header from '../common/Header';
 import Visual from './Visual';
+import Product from './Product';
 import Content from './Content';
 import Vids from './Vids';
 import Pics from './Pics';
-import Categories from './Categories';
 import Btns from './Btns';
 import Anime from '../../class/anim.js';
 
 import { useRef, useEffect, useState } from 'react';
-const path = process.env.PUBLICK_URL;
+const path = process.env.PUBLIC_URL;
 
 function Main() {
 	const main = useRef(null);
 	const pos = useRef([]);
 	const [index, setIndex] = useState(0);
+	const [scrolled, setScrolled] = useState(0);
 
 	const getPos = () => {
 		const secs = main.current.querySelectorAll('.myScroll');
@@ -23,8 +24,9 @@ function Main() {
 	};
 
 	const activation = () => {
-		const base = -200;
+		const base = -250;
 		let scroll = window.scrollY;
+		setScrolled(scroll);
 		const btns = main.current.querySelectorAll('.btns li');
 
 		pos.current.map((pos, idx) => {
@@ -57,6 +59,7 @@ function Main() {
 		<main ref={main}>
 			<Header />
 			<Visual />
+			<Product scrolled={scrolled} posStart={pos.current[1]} />
 			<Content />
 			<Vids />
 			<Pics />

@@ -1,11 +1,6 @@
 .Join {
 	.wrap {
 		width: 100%;
-		&::after {
-			display: block;
-			content: '';
-			clear: both;
-		}
 		form {
 			width: 50%;
 			float: left;
@@ -14,8 +9,8 @@
 				h1 {
 					margin-bottom: 20px;
 					label {
-						font: 25px/1 'Gilda Display';
-						color: #a52f1d;
+						font: 15px/1 'Gilda Display';
+						color: #555;
 					}
 				}
 				textarea {
@@ -35,62 +30,89 @@
 				}
 				table {
 					width: 100%;
-					&.t_id,
-					&.t_name,
-					&.t_password,
-					&.t_repassword {
-						width: 50%;
-						float: left;
-					}
-					th {
-						display: flex;
-						justify-content: left;
-						label {
-							font: 18px/1 'Gilda Display';
-							color: #a52f1d;
-							position: relative;
-							left: 0;
-						}
-					}
-					input {
-						height: 30px;
-						width: 100%;
-						background: #e7ddd4;
-						outline: none;
-						border: 1px solid #555;
-						margin-bottom: 20px;
-						padding-left: 5px;
-						&[name='birthday'] {
-							width: 33%;
-							float: left;
-							margin-right: 0.5%;
-							&:nth-child(3) {
-								margin-right: 0;
+					tbody {
+						tr {
+							display: flex;
+							flex-direction: column;
+							width: 100%;
+
+							th {
+								text-align: left;
+								margin-bottom: 5px;
+								font: 15px/1 'Gilda Display';
+								color: #555;
+
+								label {
+									font: 15px/1 'Gilda Display';
+									color: #555;
+								}
+							}
+							td {
+								display: flex;
+								input {
+									height: 30px;
+									width: 100%;
+									background: #e7ddd4;
+									outline: none;
+									border: 1px solid #555;
+									padding-left: 5px;
+								}
+							}
+							span {
+								width: 100%;
+								color: #a52f1d;
+								font: 15px/1 'Lato';
+								margin: 5px 0 10px 0;
 							}
 						}
 					}
-					p {
-						color: rgba(165, 47, 29, 0.6);
-						font: 13px/1 'Lato';
-						margin-top: -10px;
-						margin-bottom: 10px;
-					}
 				}
-				input[type='submit'],
-				input[type='reset'] {
-					background-color: #a52f1d;
-					border: none;
-					padding: 5px 50px;
-					color: #fff;
-					font: 18px/1 'Gilda Display';
-					transition: 0.3s;
-					float: right;
-					margin-left: 10px;
-				}
+				// table {
+				//
+
+				// 	th {
+				// 		display: flex;
+				// 		justify-content: left;
+				// 		label {
+				// 			font: 18px/1 'Gilda Display';
+				// 			color: #a52f1d;
+				// 			position: relative;
+				// 			left: 0;
+				// 		}
+				// 	}
+				// 	input {
+				//
+				// 		&[name='birthday'] {
+				// 			width: 33%;
+				// 			float: left;
+				// 			margin-right: 0.5%;
+				// 			&:nth-child(3) {
+				// 				margin-right: 0;
+				// 			}
+				// 		}
+				// 	}
+				// 	p {
+				// 		color: rgba(165, 47, 29, 0.6);
+				// 		font: 13px/1 'Lato';
+				// 		margin-top: -10px;
+				// 		margin-bottom: 10px;
+				// 	}
+				// }
+				// input[type='submit'],
+				// input[type='reset'] {
+				// 	background-color: #a52f1d;
+				// 	border: none;
+				// 	padding: 5px 50px;
+				// 	color: #fff;
+				// 	font: 18px/1 'Gilda Display';
+				// 	transition: 0.3s;
+				// 	float: right;
+				// 	margin-left: 10px;
+				// }
 			}
 		}
 
-		> .pic {
+		.pic {
 			width: 50%;
 			height: 100%;
 			float: left;

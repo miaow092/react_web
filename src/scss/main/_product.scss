@@ -1,0 +1,56 @@
+#Product {
+	padding: 100px 0;
+	position: relative;
+	height: 150vh;
+	background: #f3e9e0;
+	overflow: hidden;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		h1 {
+			font: bold 100px/1 'Gilda Display';
+			color: rgba(165, 47, 29, 0.7);
+			letter-spacing: -6px;
+		}
+	}
+	.pic1 {
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+		width: 300px;
+		height: 500px;
+		z-index: 3;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.pic2 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 700px;
+		z-index: 2;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.pic3 {
+		position: absolute;
+		top: 100px;
+		right: 0;
+		width: 300px;
+		height: 600px;
+		z-index: 1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

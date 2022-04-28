@@ -10,7 +10,7 @@ function Pics() {
 					<h1>Recent Gallery</h1>
 					<ul>
 						{flickr.map((item, idx) => {
-							if (idx < 5) {
+							if (idx < 4) {
 								return (
 									<li key={idx}>
 										<img

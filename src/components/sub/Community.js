@@ -112,7 +112,10 @@ function Community() {
 	}, [posts]);
 
 	return (
-		<Layout name={'Community'}>
+		<Layout
+			name={'Community'}
+			title={'Community'}
+			des={'aout sintek fnatastic'}>
 			<div className='content_sub_cs'>
 				<h1>Customer Service</h1>
 				<div className='cs'>
@@ -147,7 +150,6 @@ function Community() {
 				<p>consultation time AM 10:00 - PM 17:00</p>
 				<p>lunch break AM 12:00 - PM 13:00</p>
 			</div>
-
 			<div className='content_sub_tab'>
 				<div className='wrap'>
 					<div className='img'>
